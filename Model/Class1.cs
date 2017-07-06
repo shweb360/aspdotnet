@@ -8,6 +8,7 @@ namespace Model
 {
     public class Class1
     {
+
         GuMeiDBEntities context = new GuMeiDBEntities();
     }
 }

@@ -19,7 +19,7 @@ namespace ConsoleApplication2
 
         static void Main(string[] args)
         {
-
+            
             //string st = "0,10,11,12,13,14,16";
             //string max = st.Remove(0, st.LastIndexOf(",")+1);
             //int i = int.Parse(max);
