@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<img src="~/Content/image-empty.png" style="width: 100px; height: 100px" id="img" />
+@using (Html.BeginForm("UploadImage", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "ImageForm" }))
+{
+
+    <input type="text" id="jc_gg1_m" /><br />
+    <input type="text" id="jc_gg1_d" readonly="readonly"/>
+    
+    <input type="text" id="jc_gg2_m" /><br />
+    <input type="text" id="jc_gg2_d" readonly="readonly"/>
+    
+    <input type="text" id="jc_gg3_m" /><br />
+    <input type="text" id="jc_gg3_d" readonly="readonly"/>
+}

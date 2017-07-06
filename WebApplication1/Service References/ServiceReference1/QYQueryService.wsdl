@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSlryByQy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSlryByQyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSlryByQyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CiacAuthHeader" type="tns:CiacAuthHeader" />
+      <s:complexType name="CiacAuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetQyZcry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyZcryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQyZcryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyxx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyxxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQyxxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyAqscxkz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyAqscxkzResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQyAqscxkzResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyCreditManualStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyCreditManualStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQyCreditManualStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyThreePerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyThreePersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQyThreePersonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyZzqk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyZzqkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQyZzqkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckQyJobLicense">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jobid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckQyJobLicenseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckQyJobLicenseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyFzrqk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQyFzrqkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQyFzrqkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckQyZbdlLicense">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jgdmz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dwdm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckQyZbdlLicenseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckQyZbdlLicenseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQymcListByQymc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dwmc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQymcListByQymcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQymcListByQymcResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSlryByQySoapIn">
+    <wsdl:part name="parameters" element="tns:GetSlryByQy" />
+  </wsdl:message>
+  <wsdl:message name="GetSlryByQySoapOut">
+    <wsdl:part name="parameters" element="tns:GetSlryByQyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSlryByQyCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQyZcrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetQyZcry" />
+  </wsdl:message>
+  <wsdl:message name="GetQyZcrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetQyZcryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQyZcryCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQyxxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQyxx" />
+  </wsdl:message>
+  <wsdl:message name="GetQyxxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQyxxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQyxxCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQyAqscxkzSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQyAqscxkz" />
+  </wsdl:message>
+  <wsdl:message name="GetQyAqscxkzSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQyAqscxkzResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQyAqscxkzCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQyCreditManualStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQyCreditManualStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetQyCreditManualStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQyCreditManualStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQyCreditManualStatusCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQyThreePersonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQyThreePerson" />
+  </wsdl:message>
+  <wsdl:message name="GetQyThreePersonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQyThreePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQyThreePersonCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQyZzqkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQyZzqk" />
+  </wsdl:message>
+  <wsdl:message name="GetQyZzqkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQyZzqkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQyZzqkCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="CheckQyJobLicenseSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckQyJobLicense" />
+  </wsdl:message>
+  <wsdl:message name="CheckQyJobLicenseSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckQyJobLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckQyJobLicenseCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQyFzrqkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQyFzrqk" />
+  </wsdl:message>
+  <wsdl:message name="GetQyFzrqkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQyFzrqkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQyFzrqkCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="CheckQyZbdlLicenseSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckQyZbdlLicense" />
+  </wsdl:message>
+  <wsdl:message name="CheckQyZbdlLicenseSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckQyZbdlLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckQyZbdlLicenseCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetQymcListByQymcSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQymcListByQymc" />
+  </wsdl:message>
+  <wsdl:message name="GetQymcListByQymcSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQymcListByQymcResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQymcListByQymcCiacAuthHeader">
+    <wsdl:part name="CiacAuthHeader" element="tns:CiacAuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="QYQueryServiceSoap">
+    <wsdl:operation name="GetSlryByQy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业的四类人员（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetSlryByQySoapIn" />
+      <wsdl:output message="tns:GetSlryByQySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQyZcry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业的注册人员（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetQyZcrySoapIn" />
+      <wsdl:output message="tns:GetQyZcrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQyxx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业的基本信息（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetQyxxSoapIn" />
+      <wsdl:output message="tns:GetQyxxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQyAqscxkz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业安全生产许可证信息（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetQyAqscxkzSoapIn" />
+      <wsdl:output message="tns:GetQyAqscxkzSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQyCreditManualStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业的企业诚信手册自检状态（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetQyCreditManualStatusSoapIn" />
+      <wsdl:output message="tns:GetQyCreditManualStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQyThreePerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业的三类人员（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetQyThreePersonSoapIn" />
+      <wsdl:output message="tns:GetQyThreePersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQyZzqk">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业的资质情况（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetQyZzqkSoapIn" />
+      <wsdl:output message="tns:GetQyZzqkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckQyJobLicense">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据（机构代码证、单位代码、单位ID三者只需一个即可）、事项ID，来检查该企业以目前的资质情况是否可以执行指定的事项</wsdl:documentation>
+      <wsdl:input message="tns:CheckQyJobLicenseSoapIn" />
+      <wsdl:output message="tns:CheckQyJobLicenseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQyFzrqk">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业的负责人情况（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:GetQyFzrqkSoapIn" />
+      <wsdl:output message="tns:GetQyFzrqkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckQyZbdlLicense">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检查企业资质与招标代理要求的符合情况（机构代码证、单位代码、单位ID三者只需一个即可）</wsdl:documentation>
+      <wsdl:input message="tns:CheckQyZbdlLicenseSoapIn" />
+      <wsdl:output message="tns:CheckQyZbdlLicenseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQymcListByQymc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取企业清单列表（企业名称模糊查询）</wsdl:documentation>
+      <wsdl:input message="tns:GetQymcListByQymcSoapIn" />
+      <wsdl:output message="tns:GetQymcListByQymcSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QYQueryServiceSoap" type="tns:QYQueryServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSlryByQy">
+      <soap:operation soapAction="http://tempuri.org/GetSlryByQy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSlryByQyCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyZcry">
+      <soap:operation soapAction="http://tempuri.org/GetQyZcry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQyZcryCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyxx">
+      <soap:operation soapAction="http://tempuri.org/GetQyxx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQyxxCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyAqscxkz">
+      <soap:operation soapAction="http://tempuri.org/GetQyAqscxkz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQyAqscxkzCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyCreditManualStatus">
+      <soap:operation soapAction="http://tempuri.org/GetQyCreditManualStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQyCreditManualStatusCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyThreePerson">
+      <soap:operation soapAction="http://tempuri.org/GetQyThreePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQyThreePersonCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyZzqk">
+      <soap:operation soapAction="http://tempuri.org/GetQyZzqk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQyZzqkCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckQyJobLicense">
+      <soap:operation soapAction="http://tempuri.org/CheckQyJobLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CheckQyJobLicenseCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyFzrqk">
+      <soap:operation soapAction="http://tempuri.org/GetQyFzrqk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQyFzrqkCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckQyZbdlLicense">
+      <soap:operation soapAction="http://tempuri.org/CheckQyZbdlLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CheckQyZbdlLicenseCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQymcListByQymc">
+      <soap:operation soapAction="http://tempuri.org/GetQymcListByQymc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetQymcListByQymcCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QYQueryServiceSoap12" type="tns:QYQueryServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSlryByQy">
+      <soap12:operation soapAction="http://tempuri.org/GetSlryByQy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSlryByQyCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyZcry">
+      <soap12:operation soapAction="http://tempuri.org/GetQyZcry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQyZcryCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyxx">
+      <soap12:operation soapAction="http://tempuri.org/GetQyxx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQyxxCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyAqscxkz">
+      <soap12:operation soapAction="http://tempuri.org/GetQyAqscxkz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQyAqscxkzCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyCreditManualStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetQyCreditManualStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQyCreditManualStatusCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyThreePerson">
+      <soap12:operation soapAction="http://tempuri.org/GetQyThreePerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQyThreePersonCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyZzqk">
+      <soap12:operation soapAction="http://tempuri.org/GetQyZzqk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQyZzqkCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckQyJobLicense">
+      <soap12:operation soapAction="http://tempuri.org/CheckQyJobLicense" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CheckQyJobLicenseCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQyFzrqk">
+      <soap12:operation soapAction="http://tempuri.org/GetQyFzrqk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQyFzrqkCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckQyZbdlLicense">
+      <soap12:operation soapAction="http://tempuri.org/CheckQyZbdlLicense" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CheckQyZbdlLicenseCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQymcListByQymc">
+      <soap12:operation soapAction="http://tempuri.org/GetQymcListByQymc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetQymcListByQymcCiacAuthHeader" part="CiacAuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QYQueryService">
+    <wsdl:port name="QYQueryServiceSoap" binding="tns:QYQueryServiceSoap">
+      <soap:address location="http://172.16.110.231/JGBQyDataService/QYQueryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QYQueryServiceSoap12" binding="tns:QYQueryServiceSoap12">
+      <soap12:address location="http://172.16.110.231/JGBQyDataService/QYQueryService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

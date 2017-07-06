@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDEE3AE5-8234-46B8-A6AE-F2D2D1C22718}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="GuMeiModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuMeiModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuMeiModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuMeiModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuMeiModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S_city.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_dict.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_dicttype.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_environment.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_menu.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_role.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_role_menu.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_user.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_user_log.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_user_loginerror.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_user_role.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="S_user_validatenum.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CareApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DemandApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Elderly.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ExchangeRecord.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_HelpAgeAgency.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LifeApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_LifeServiceAgency.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MedicalAgency.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_MedicalApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_News.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PensionAgency.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PensionApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PensionProduct.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PublicApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_PublicServiceAgency.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_recordServers.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RescuePersonnel.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_RescuePersonnelApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_ServicePersonnel.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SocialPensionApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_StreetHelpAgeApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_StreetPensionApply.cs">
+      <DependentUpon>GuMeiModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="GuMeiModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GuMeiModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="GuMeiModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GuMeiModel.Context.cs</LastGenOutput>
+      <DependentUpon>GuMeiModel.edmx</DependentUpon>
+    </None>
+    <None Include="GuMeiModel.edmx.diagram">
+      <DependentUpon>GuMeiModel.edmx</DependentUpon>
+    </None>
+    <None Include="GuMeiModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GuMeiModel.edmx</DependentUpon>
+      <LastGenOutput>GuMeiModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

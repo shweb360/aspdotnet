@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://1.rc.xiniu.com/js/jq/jqueryV173.js"></script>
+    <title>调用webservice演示</title>
+    <script>
+        $(function () {
+            
+            getString();
+            //getUser();
+            //getUserList();
+           // sayHello();
+        });
+
+        //1.返回字符串类型 
+        function getString()
+        {            
+            $.ajax({
+                type: "post",
+                contentType: "application/json",
+                url: "WebService1.asmx/HelloWorld",
+                data: "{}",
+                dataType: "json",
+                success: function (result) {
+                    alert(result.d);
+                    console.log(result.d);
+                }
+            });
+        }
+        //2.返回对象类型 
+        function getUser() {
+            $.ajax({
+                type: "post",
+                contentType: "application/json",
+                url: "WebService1.asmx/GetUser",
+                data: "{}",
+                dataType: "json",
+                success: function (result) {
+                   
+                    alert(result.d.Id + " " + result.d.UserName);
+                    console.log("data:" + result);
+                }
+            });
+        }
+        //3.返回泛型集合类型 
+        function getUserList() {
+            $.ajax({
+                type: "post",
+                contentType: "application/json",
+                url: "WebService1.asmx/GetUserList",
+                data: "{}",
+                dataType: "json",
+                success: function (result) {
+                    debugger;
+                    $.each(result.d, function (index, data) { 
+                        alert(data.Id+" "+data.UserName); 
+                    }); 
+                }
+            });
+        }
+        //3.传递参数 
+        function sayHello() {
+            $.ajax({
+                type: "post",
+                contentType: "application/json",
+                url: "WebService1.asmx/SayHello",
+                data: "{ name:'wushuagn'}",
+                dataType: "json",
+                success: function (result) {
+                    alert(result.d);
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+</body>
+</html>

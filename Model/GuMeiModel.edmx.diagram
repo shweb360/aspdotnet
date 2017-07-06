@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="30d7e567ee4f42a5bd3fbeecbf3abab1" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="GuMeiDBModel.S_city" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_dict" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_dicttype" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_environment" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_menu" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_role" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_role_menu" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_user" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_user_log" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_user_loginerror" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_user_role" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.S_user_validatenum" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_CareApply" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_DemandApply" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_Elderly" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_ExchangeRecord" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_HelpAgeAgency" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_LifeApply" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_LifeServiceAgency" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_MedicalAgency" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_MedicalApply" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_News" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_PensionAgency" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_PensionApply" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_PensionProduct" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_PublicApply" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_PublicServiceAgency" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_recordServers" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_RescuePersonnel" Width="1.5" PointX="16.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_RescuePersonnelApply" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_ServicePersonnel" Width="1.5" PointX="18.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_SocialPensionApply" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_StreetHelpAgeApply" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuMeiDBModel.T_StreetPensionApply" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

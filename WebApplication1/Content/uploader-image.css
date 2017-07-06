@@ -1,0 +1,32 @@
+﻿.tabTitle { overflow: hidden; zoom: 1; }
+.tabTitle li { float: left; margin-right: 4px; z-index: 10; position: relative; }
+.tabTitle li a { float: left; padding: 0 18px; border: 1px solid #cdcdcd; border-bottom: none; line-height: 44px; font-size: 14px; color: #333; text-decoration: none; font-weight: bold; background: url(bg-tab.png) repeat-x left bottom; }
+.tabTitle li a:hover, .tabTitle li.on a { border-top: 2px solid #336699; line-height: 44px; background: #fff; }
+
+.tabCont { margin-top: -1px; padding: 10px; border: 1px solid #cdcdcd; background: #fff; }
+
+.turn-box { min-height: 200px; _height: 200px; }
+.turn-box .x-button { margin: 10px; }
+
+#drop-area { width: 400px; height: 200px; line-height: 200px; text-align: center; font-size: 18px; color: #777; border: 1px solid red; margin: 10px 0; }
+
+
+.upload-input { position: absolute; overflow: hidden; }
+.upload-html4 { position: absolute; left: -10000px; top: -10000px; }
+
+.u-loaded { color: green; }
+.u-total { color: #FC5900; }
+
+.u-item { float: left; width: 136px; height: 174px; margin-left: 10px; position: relative; }
+.u-first { margin: 0; }
+
+.u-img, .u-img img { width: 136px; height: 150px; overflow: hidden; }
+.u-name { text-align: center; height: 24px; line-height: 24px; overflow: hidden; }
+
+.u-progress-bar, .u-detail { position: absolute; left: 0; bottom: 24px; width: 100%; height: 20px; }
+.u-progress-bar { background-color: #7ce4e6; opacity: 0.3; }
+.u-progress { width: 0; height: 100%; background-color: green; opacity: 0.5; }
+.u-detail { line-height: 20px; text-align: center; color: #fff; }
+
+/*.u-progress-bar { position: absolute; left: 0; bottom: 22px; height: 2px; overflow: hidden; background-color: #2B85E9; width: 20%; }
+.u-progress-text { position: absolute; left: 0; bottom: 24px; width: 100%;height: 24px; line-height: 24px; text-align: center; background-color: #0ababf; opacity: 0.5; }*/

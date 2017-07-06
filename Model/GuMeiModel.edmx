@@ -1,0 +1,2470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GuMeiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="S_city">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cityid" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Provinceid" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="Citypy" Type="varchar" MaxLength="25" />
+          <Property Name="Orderseq" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="S_dict">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typecode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sort" Type="int" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name_cn" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name_hk" Type="varchar" MaxLength="100" />
+          <Property Name="Name_en" Type="varchar" MaxLength="100" />
+          <Property Name="Value1" Type="nvarchar" MaxLength="500" />
+          <Property Name="Value2" Type="nvarchar" MaxLength="500" />
+          <Property Name="Value3" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+          <Property Name="Isdeleted" Type="char" MaxLength="1" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+        </EntityType>
+        <EntityType Name="S_dicttype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typecode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Typename_cn" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Typename_en" Type="varchar" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="Isvalid" Type="char" MaxLength="1" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+        </EntityType>
+        <EntityType Name="S_environment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Parametername" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Parametervalue" Type="varchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+        </EntityType>
+        <EntityType Name="S_menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Menukind" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Menuid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Menuname_zho" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Menuname_eng" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pmenuid" Type="nvarchar" MaxLength="50" />
+          <Property Name="Islastlevel" Type="int" Nullable="false" />
+          <Property Name="Orderseq" Type="nvarchar" MaxLength="10" />
+          <Property Name="Menuactions" Type="bigint" Nullable="false" />
+          <Property Name="Showallways" Type="int" Nullable="false" />
+          <Property Name="Menuobject" Type="nvarchar" MaxLength="100" />
+          <Property Name="Menuurl" Type="nvarchar" MaxLength="100" />
+          <Property Name="Menuparams" Type="nvarchar" MaxLength="100" />
+          <Property Name="Menuiconsmall" Type="nvarchar" MaxLength="100" />
+          <Property Name="Menuiconmiddle" Type="nvarchar" MaxLength="100" />
+          <Property Name="Menuiconlarge" Type="nvarchar" MaxLength="100" />
+          <Property Name="Iscontextmenu" Type="int" Nullable="false" />
+          <Property Name="Istoolbarmenu" Type="int" Nullable="false" />
+          <Property Name="Isshortcutmenu" Type="int" Nullable="false" />
+          <Property Name="Showtopsep" Type="int" Nullable="false" />
+          <Property Name="Showbottomsep" Type="int" Nullable="false" />
+          <Property Name="Tag_1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tag_2" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tag_3" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tag_4" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tag_5" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuser" Type="varchar" MaxLength="50" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuser" Type="varchar" MaxLength="50" />
+          <Property Name="Updateip" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="S_role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Roleid" Type="varchar" MaxLength="30" />
+          <Property Name="Rolename" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+          <Property Name="Isdeleted" Type="char" MaxLength="1" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+          <Property Name="Roletype" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="S_role_menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Roleid" Type="varchar" MaxLength="30" />
+          <Property Name="Menuid" Type="varchar" MaxLength="50" />
+          <Property Name="Userpower" Type="varchar" MaxLength="50" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+        </EntityType>
+        <EntityType Name="S_user">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="Realname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Usertype" Type="char" MaxLength="1" />
+          <Property Name="Dept_id" Type="int" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="200" />
+          <Property Name="Sex" Type="varchar" MaxLength="10" />
+          <Property Name="Tel" Type="varchar" MaxLength="20" />
+          <Property Name="Mobile" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Islocked" Type="char" MaxLength="1" />
+          <Property Name="Ischangepwd" Type="char" MaxLength="1" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+          <Property Name="Isdeleted" Type="char" MaxLength="1" />
+          <Property Name="Lastlogintime" Type="datetime" />
+          <Property Name="Lastloginip" Type="varchar" MaxLength="50" />
+          <Property Name="Logintimes" Type="int" Nullable="false" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" Nullable="false" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" Nullable="false" />
+          <Property Name="Clientid" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="S_user_log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_id" Type="int" />
+          <Property Name="Oprttype" Type="int" />
+          <Property Name="Oprttime" Type="datetime" />
+          <Property Name="Ip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="500" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+          <Property Name="Macaddr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="Ip_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Clientversion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="S_user_loginerror">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_id" Type="int" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="Oprttype" Type="int" Nullable="false" />
+          <Property Name="Oprttime" Type="datetime" Nullable="false" />
+          <Property Name="Clientid" Type="varchar" MaxLength="50" />
+          <Property Name="Ip" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="500" />
+          <Property Name="Errortimes" Type="int" Nullable="false" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+        </EntityType>
+        <EntityType Name="S_user_role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_id" Type="int" />
+          <Property Name="Roleid" Type="varchar" MaxLength="30" />
+          <Property Name="Createtime" Type="datetime" />
+          <Property Name="Createuserid" Type="int" />
+          <Property Name="Updatetime" Type="datetime" />
+          <Property Name="Updateuserid" Type="int" />
+        </EntityType>
+        <EntityType Name="S_user_validatenum">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="Mobilenum" Type="varchar" MaxLength="50" />
+          <Property Name="Validatetype" Type="char" MaxLength="1" />
+          <Property Name="Validatenum" Type="varchar" MaxLength="20" />
+          <Property Name="Expiretime" Type="datetime" />
+          <Property Name="Sessionid" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_CareApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Household" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Committee" Type="nvarchar" MaxLength="50" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="DiseaseHistory" Type="nvarchar" MaxLength="100" />
+          <Property Name="DrugTaboo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServicePersonnelId" Type="int" Nullable="false" />
+          <Property Name="ElderlyId" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="ServiceType" Type="int" Nullable="false" />
+          <Property Name="HeadImgUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="ElderlyType" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_DemandApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="Household" Type="int" Nullable="false" />
+          <Property Name="Children" Type="nvarchar" MaxLength="20" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="Health" Type="nvarchar" MaxLength="100" />
+          <Property Name="RequiredServices" Type="nvarchar" MaxLength="100" />
+          <Property Name="ServiceTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="ElderlyId" Type="int" Nullable="false" />
+          <Property Name="ServicePersonnelId" Type="int" Nullable="false" />
+          <Property Name="Committee" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+          <Property Name="ServiceStartTime" Type="datetime" />
+          <Property Name="ServiceEndTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_Elderly">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="ElderlyType" Type="int" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="IdCard" Type="nvarchar" MaxLength="18" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="HomeArea" Type="int" Nullable="false" />
+          <Property Name="Spouse" Type="nvarchar" MaxLength="20" />
+          <Property Name="Children" Type="nvarchar" MaxLength="20" />
+          <Property Name="Identity" Type="int" Nullable="false" />
+          <Property Name="HeadImgUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="AgencyId" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="EmergencyContact" Type="nvarchar" MaxLength="20" />
+          <Property Name="Volunteer" Type="int" Nullable="false" />
+          <Property Name="AgeGroup" Type="int" Nullable="false" />
+          <Property Name="IsRegistry" Type="int" Nullable="false" />
+          <Property Name="IsLonely" Type="int" Nullable="false" />
+          <Property Name="IsSmoking" Type="int" Nullable="false" />
+          <Property Name="Alarm" Type="int" Nullable="false" />
+          <Property Name="IsUseBlanket" Type="int" Nullable="false" />
+          <Property Name="IsCutFuncation" Type="int" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_ExchangeRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OutId" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_HelpAgeAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AgencyType" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Profile" Type="nvarchar" MaxLength="500" />
+          <Property Name="LegalPerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Certificate" Type="nvarchar" MaxLength="100" />
+          <Property Name="ChargeStandard" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceEvaluation" Type="nvarchar" MaxLength="100" />
+          <Property Name="Point" Type="nvarchar" MaxLength="20" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="AgencyCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contacts" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ContactsMobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ContactsEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+          <Property Name="Acreage" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_LifeApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" />
+          <Property Name="AgencyId" Type="int" />
+          <Property Name="ApplyId" Type="int" Nullable="false" />
+          <Property Name="ApplyType" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_LifeServiceAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Profile" Type="nvarchar" MaxLength="500" />
+          <Property Name="LegalPerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ServiceType" Type="int" Nullable="false" />
+          <Property Name="OtherType" Type="nvarchar" MaxLength="20" />
+          <Property Name="ChargeStandard" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceEvaluation" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Area" Type="int" />
+          <Property Name="Point" Type="nvarchar" MaxLength="20" />
+          <Property Name="AgencyCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contacts" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ContactsMobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ContactsEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_MedicalAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Profile" Type="nvarchar" MaxLength="500" />
+          <Property Name="LegalPerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Department" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmergencyDoctor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Expert" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChargeStandard" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceEvaluation" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Area" Type="int" />
+          <Property Name="HospitalLevel" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Point" Type="nvarchar" MaxLength="20" />
+          <Property Name="AgencyCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contacts" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ContactsMobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ContactsEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_MedicalApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="HealthCertificate" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="AgencyId" Type="int" Nullable="false" />
+          <Property Name="ApplyId" Type="int" Nullable="false" />
+          <Property Name="ApplyType" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NewsType" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="PicUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="ShortContent" Type="nvarchar" MaxLength="200" />
+          <Property Name="Content" Type="text" />
+          <Property Name="PublishUser" Type="int" Nullable="false" />
+          <Property Name="PublishTime" Type="datetime" />
+          <Property Name="Hits" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_PensionAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Profile" Type="nvarchar" MaxLength="500" />
+          <Property Name="LegalPerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Certificate" Type="nvarchar" MaxLength="100" />
+          <Property Name="KPI" Type="nvarchar" MaxLength="100" />
+          <Property Name="ChargeStandard" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceEvaluation" Type="nvarchar" MaxLength="100" />
+          <Property Name="Point" Type="nvarchar" MaxLength="20" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="AgencyCategory" Type="int" />
+          <Property Name="AgencyType" Type="int" />
+          <Property Name="Bed" Type="int" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="AgencyCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contacts" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ContactsMobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ContactsEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_PensionApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Household" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiseaseHistory" Type="nvarchar" MaxLength="100" />
+          <Property Name="DrugTaboo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Guardian" Type="nvarchar" MaxLength="20" />
+          <Property Name="Relationship" Type="int" Nullable="false" />
+          <Property Name="GuardianMobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="GuardianAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServiceType" Type="int" Nullable="false" />
+          <Property Name="Request" Type="nvarchar" MaxLength="500" />
+          <Property Name="ApplicantMobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="HeadImgUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="ElderlyId" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Committee" Type="nvarchar" MaxLength="50" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_PensionProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductImg" Type="nvarchar" MaxLength="200" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="AgencyId" Type="int" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsHot" Type="int" Nullable="false" />
+          <Property Name="ExchangeIntegral" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_PublicApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" />
+          <Property Name="AgencyId" Type="int" />
+          <Property Name="ApplyId" Type="int" Nullable="false" />
+          <Property Name="ApplyType" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_PublicServiceAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Profile" Type="nvarchar" MaxLength="500" />
+          <Property Name="LegalPerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ServiceType" Type="int" Nullable="false" />
+          <Property Name="OtherType" Type="nvarchar" MaxLength="20" />
+          <Property Name="ChargeStandard" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceEvaluation" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Area" Type="int" />
+          <Property Name="Point" Type="nvarchar" MaxLength="20" />
+          <Property Name="AgencyCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contacts" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ContactsMobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ContactsEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_recordServers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uid" Type="int" Nullable="false" />
+          <Property Name="usertype" Type="smallint" />
+          <Property Name="starttime" Type="datetime" />
+          <Property Name="endtime" Type="datetime" />
+          <Property Name="totaltime" Type="int" />
+          <Property Name="record" Type="text" />
+        </EntityType>
+        <EntityType Name="T_RescuePersonnel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonnelType" Type="int" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="IdCard" Type="nvarchar" MaxLength="18" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+          <Property Name="ServiceSkills" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServiceEvaluation" Type="nvarchar" MaxLength="100" />
+          <Property Name="AgencyId" Type="int" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Point" Type="nvarchar" MaxLength="20" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="HeadImgUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_RescuePersonnelApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="HealthCertificate" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="PersonnelId" Type="int" Nullable="false" />
+          <Property Name="ApplyId" Type="int" Nullable="false" />
+          <Property Name="ApplyType" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_ServicePersonnel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Account" Type="nvarchar" MaxLength="20" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonnelType" Type="int" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="IdCard" Type="nvarchar" MaxLength="18" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="AreaName" Type="nvarchar" MaxLength="200" />
+          <Property Name="HeadImgUrl" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceSkills" Type="nvarchar" MaxLength="200" />
+          <Property Name="ServiceTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServiceEvaluation" Type="nvarchar" MaxLength="100" />
+          <Property Name="AgencyId" Type="int" />
+          <Property Name="TotalIntegral" Type="int" Nullable="false" />
+          <Property Name="UsedIntegral" Type="int" Nullable="false" />
+          <Property Name="ResidualIntegral" Type="int" Nullable="false" />
+          <Property Name="IsVolunteerExperience" Type="int" Nullable="false" />
+          <Property Name="IsWorkExperience" Type="int" Nullable="false" />
+          <Property Name="Profile" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+          <Property Name="SkillCertificate" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="T_SocialPensionApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="HealthCertificate" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="AgencyId" Type="int" Nullable="false" />
+          <Property Name="ApplyId" Type="int" Nullable="false" />
+          <Property Name="ApplyType" Type="int" Nullable="false" />
+          <Property Name="ServiceType" Type="int" Nullable="false" />
+          <Property Name="TypeOption" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_StreetHelpAgeApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="HealthCertificate" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="AgencyId" Type="int" Nullable="false" />
+          <Property Name="ApplyId" Type="int" Nullable="false" />
+          <Property Name="ApplyType" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityType Name="T_StreetPensionApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="HealthCertificate" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="AgencyId" Type="int" Nullable="false" />
+          <Property Name="ApplyId" Type="int" Nullable="false" />
+          <Property Name="ApplyType" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateUserid" Type="int" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserid" Type="int" />
+        </EntityType>
+        <EntityContainer Name="GuMeiDBModelStoreContainer">
+          <EntitySet Name="S_city" EntityType="Self.S_city" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_dict" EntityType="Self.S_dict" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_dicttype" EntityType="Self.S_dicttype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_environment" EntityType="Self.S_environment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_menu" EntityType="Self.S_menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_role" EntityType="Self.S_role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_role_menu" EntityType="Self.S_role_menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_user" EntityType="Self.S_user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_user_log" EntityType="Self.S_user_log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_user_loginerror" EntityType="Self.S_user_loginerror" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_user_role" EntityType="Self.S_user_role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_user_validatenum" EntityType="Self.S_user_validatenum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CareApply" EntityType="Self.T_CareApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_DemandApply" EntityType="Self.T_DemandApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Elderly" EntityType="Self.T_Elderly" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_ExchangeRecord" EntityType="Self.T_ExchangeRecord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_HelpAgeAgency" EntityType="Self.T_HelpAgeAgency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_LifeApply" EntityType="Self.T_LifeApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_LifeServiceAgency" EntityType="Self.T_LifeServiceAgency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_MedicalAgency" EntityType="Self.T_MedicalAgency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_MedicalApply" EntityType="Self.T_MedicalApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_News" EntityType="Self.T_News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_PensionAgency" EntityType="Self.T_PensionAgency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_PensionApply" EntityType="Self.T_PensionApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_PensionProduct" EntityType="Self.T_PensionProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_PublicApply" EntityType="Self.T_PublicApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_PublicServiceAgency" EntityType="Self.T_PublicServiceAgency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_recordServers" EntityType="Self.T_recordServers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_RescuePersonnel" EntityType="Self.T_RescuePersonnel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_RescuePersonnelApply" EntityType="Self.T_RescuePersonnelApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_ServicePersonnel" EntityType="Self.T_ServicePersonnel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_SocialPensionApply" EntityType="Self.T_SocialPensionApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_StreetHelpAgeApply" EntityType="Self.T_StreetHelpAgeApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_StreetPensionApply" EntityType="Self.T_StreetPensionApply" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GuMeiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="S_city">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cityid" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Provinceid" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Citypy" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Orderseq" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="S_dict">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typecode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sort" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name_cn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_hk" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name_en" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Value1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Value2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Value3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Isdeleted" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_dicttype">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typecode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Typename_cn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Typename_en" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="Isvalid" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_environment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Parametername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Parametervalue" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Menukind" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Menuid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Menuname_zho" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Menuname_eng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pmenuid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Islastlevel" Type="Int32" Nullable="false" />
+          <Property Name="Orderseq" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Menuactions" Type="Int64" Nullable="false" />
+          <Property Name="Showallways" Type="Int32" Nullable="false" />
+          <Property Name="Menuobject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Menuurl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Menuparams" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Menuiconsmall" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Menuiconmiddle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Menuiconlarge" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Iscontextmenu" Type="Int32" Nullable="false" />
+          <Property Name="Istoolbarmenu" Type="Int32" Nullable="false" />
+          <Property Name="Isshortcutmenu" Type="Int32" Nullable="false" />
+          <Property Name="Showtopsep" Type="Int32" Nullable="false" />
+          <Property Name="Showbottomsep" Type="Int32" Nullable="false" />
+          <Property Name="Tag_1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tag_2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tag_3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tag_4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tag_5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Updateip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="S_role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Roleid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Rolename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Isdeleted" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+          <Property Name="Roletype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="S_role_menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Roleid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Menuid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Userpower" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_user">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Realname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Usertype" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Dept_id" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Islocked" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Ischangepwd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Isdeleted" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Lastlogintime" Type="DateTime" Precision="3" />
+          <Property Name="Lastloginip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Logintimes" Type="Int32" Nullable="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" Nullable="false" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" Nullable="false" />
+          <Property Name="Clientid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="S_user_log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_id" Type="Int32" />
+          <Property Name="Oprttype" Type="Int32" />
+          <Property Name="Oprttime" Type="DateTime" Precision="3" />
+          <Property Name="Ip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+          <Property Name="Macaddr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ip_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Clientversion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="S_user_loginerror">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_id" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Oprttype" Type="Int32" Nullable="false" />
+          <Property Name="Oprttime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Clientid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Errortimes" Type="Int32" Nullable="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_user_role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_id" Type="Int32" />
+          <Property Name="Roleid" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Createtime" Type="DateTime" Precision="3" />
+          <Property Name="Createuserid" Type="Int32" />
+          <Property Name="Updatetime" Type="DateTime" Precision="3" />
+          <Property Name="Updateuserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="S_user_validatenum">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mobilenum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Validatetype" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Validatenum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Expiretime" Type="DateTime" Precision="3" />
+          <Property Name="Sessionid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_CareApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Household" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Committee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="DiseaseHistory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DrugTaboo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServicePersonnelId" Type="Int32" Nullable="false" />
+          <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="ServiceType" Type="Int32" Nullable="false" />
+          <Property Name="HeadImgUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ElderlyType" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_DemandApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Household" Type="Int32" Nullable="false" />
+          <Property Name="Children" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="Health" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RequiredServices" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+          <Property Name="ServicePersonnelId" Type="Int32" Nullable="false" />
+          <Property Name="Committee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+          <Property Name="ServiceStartTime" Type="DateTime" Precision="3" />
+          <Property Name="ServiceEndTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_Elderly">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ElderlyType" Type="Int32" Nullable="false" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="IdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="HomeArea" Type="Int32" Nullable="false" />
+          <Property Name="Spouse" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Children" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Identity" Type="Int32" Nullable="false" />
+          <Property Name="HeadImgUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyId" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="EmergencyContact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Volunteer" Type="Int32" Nullable="false" />
+          <Property Name="AgeGroup" Type="Int32" Nullable="false" />
+          <Property Name="IsRegistry" Type="Int32" Nullable="false" />
+          <Property Name="IsLonely" Type="Int32" Nullable="false" />
+          <Property Name="IsSmoking" Type="Int32" Nullable="false" />
+          <Property Name="Alarm" Type="Int32" Nullable="false" />
+          <Property Name="IsUseBlanket" Type="Int32" Nullable="false" />
+          <Property Name="IsCutFuncation" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_ExchangeRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OutId" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_HelpAgeAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AgencyType" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Profile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LegalPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Certificate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ChargeStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceEvaluation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Point" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="AgencyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contacts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+          <Property Name="Acreage" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_LifeApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyId" Type="Int32" />
+          <Property Name="ApplyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyType" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_LifeServiceAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Profile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LegalPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServiceType" Type="Int32" Nullable="false" />
+          <Property Name="OtherType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ChargeStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceEvaluation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Area" Type="Int32" />
+          <Property Name="Point" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contacts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_MedicalAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Profile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LegalPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EmergencyDoctor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Expert" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChargeStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceEvaluation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Area" Type="Int32" />
+          <Property Name="HospitalLevel" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Point" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contacts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_MedicalApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HealthCertificate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyType" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NewsType" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PicUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ShortContent" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PublishUser" Type="Int32" Nullable="false" />
+          <Property Name="PublishTime" Type="DateTime" Precision="3" />
+          <Property Name="Hits" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_PensionAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Profile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LegalPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Certificate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="KPI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ChargeStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceEvaluation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Point" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="AgencyCategory" Type="Int32" />
+          <Property Name="AgencyType" Type="Int32" />
+          <Property Name="Bed" Type="Int32" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="AgencyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contacts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_PensionApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Household" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiseaseHistory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DrugTaboo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Guardian" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Relationship" Type="Int32" Nullable="false" />
+          <Property Name="GuardianMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceType" Type="Int32" Nullable="false" />
+          <Property Name="Request" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicantMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="HeadImgUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ElderlyId" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Committee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_PensionProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShortName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProductImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyId" Type="Int32" />
+          <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsHot" Type="Int32" Nullable="false" />
+          <Property Name="ExchangeIntegral" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_PublicApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyId" Type="Int32" />
+          <Property Name="ApplyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyType" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_PublicServiceAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Profile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LegalPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServiceType" Type="Int32" Nullable="false" />
+          <Property Name="OtherType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ChargeStandard" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceEvaluation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Area" Type="Int32" />
+          <Property Name="Point" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contacts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsMobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactsIdCardImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyCodeImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BusinessLicenseImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_recordServers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uid" Type="Int32" Nullable="false" />
+          <Property Name="usertype" Type="Int16" />
+          <Property Name="starttime" Type="DateTime" Precision="3" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
+          <Property Name="totaltime" Type="Int32" />
+          <Property Name="record" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_RescuePersonnel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PersonnelType" Type="Int32" Nullable="false" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="IdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceSkills" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceEvaluation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyId" Type="Int32" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Point" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="HeadImgUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_RescuePersonnelApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HealthCertificate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PersonnelId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyType" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_ServicePersonnel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PersonnelType" Type="Int32" Nullable="false" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="IdCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="AreaName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="HeadImgUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceSkills" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceEvaluation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AgencyId" Type="Int32" />
+          <Property Name="TotalIntegral" Type="Int32" Nullable="false" />
+          <Property Name="UsedIntegral" Type="Int32" Nullable="false" />
+          <Property Name="ResidualIntegral" Type="Int32" Nullable="false" />
+          <Property Name="IsVolunteerExperience" Type="Int32" Nullable="false" />
+          <Property Name="IsWorkExperience" Type="Int32" Nullable="false" />
+          <Property Name="Profile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+          <Property Name="SkillCertificate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_SocialPensionApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HealthCertificate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyType" Type="Int32" Nullable="false" />
+          <Property Name="ServiceType" Type="Int32" Nullable="false" />
+          <Property Name="TypeOption" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_StreetHelpAgeApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HealthCertificate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyType" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="T_StreetPensionApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RealName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobile" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HealthCertificate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AgencyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyId" Type="Int32" Nullable="false" />
+          <Property Name="ApplyType" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserid" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateUserid" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="GuMeiDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="S_city" EntityType="Self.S_city" />
+          <EntitySet Name="S_dict" EntityType="Self.S_dict" />
+          <EntitySet Name="S_dicttype" EntityType="Self.S_dicttype" />
+          <EntitySet Name="S_environment" EntityType="Self.S_environment" />
+          <EntitySet Name="S_menu" EntityType="Self.S_menu" />
+          <EntitySet Name="S_role" EntityType="Self.S_role" />
+          <EntitySet Name="S_role_menu" EntityType="Self.S_role_menu" />
+          <EntitySet Name="S_user" EntityType="Self.S_user" />
+          <EntitySet Name="S_user_log" EntityType="Self.S_user_log" />
+          <EntitySet Name="S_user_loginerror" EntityType="Self.S_user_loginerror" />
+          <EntitySet Name="S_user_role" EntityType="Self.S_user_role" />
+          <EntitySet Name="S_user_validatenum" EntityType="Self.S_user_validatenum" />
+          <EntitySet Name="T_CareApply" EntityType="Self.T_CareApply" />
+          <EntitySet Name="T_DemandApply" EntityType="Self.T_DemandApply" />
+          <EntitySet Name="T_Elderly" EntityType="Self.T_Elderly" />
+          <EntitySet Name="T_ExchangeRecord" EntityType="Self.T_ExchangeRecord" />
+          <EntitySet Name="T_HelpAgeAgency" EntityType="Self.T_HelpAgeAgency" />
+          <EntitySet Name="T_LifeApply" EntityType="Self.T_LifeApply" />
+          <EntitySet Name="T_LifeServiceAgency" EntityType="Self.T_LifeServiceAgency" />
+          <EntitySet Name="T_MedicalAgency" EntityType="Self.T_MedicalAgency" />
+          <EntitySet Name="T_MedicalApply" EntityType="Self.T_MedicalApply" />
+          <EntitySet Name="T_News" EntityType="Self.T_News" />
+          <EntitySet Name="T_PensionAgency" EntityType="Self.T_PensionAgency" />
+          <EntitySet Name="T_PensionApply" EntityType="Self.T_PensionApply" />
+          <EntitySet Name="T_PensionProduct" EntityType="Self.T_PensionProduct" />
+          <EntitySet Name="T_PublicApply" EntityType="Self.T_PublicApply" />
+          <EntitySet Name="T_PublicServiceAgency" EntityType="Self.T_PublicServiceAgency" />
+          <EntitySet Name="T_recordServers" EntityType="Self.T_recordServers" />
+          <EntitySet Name="T_RescuePersonnel" EntityType="Self.T_RescuePersonnel" />
+          <EntitySet Name="T_RescuePersonnelApply" EntityType="Self.T_RescuePersonnelApply" />
+          <EntitySet Name="T_ServicePersonnel" EntityType="Self.T_ServicePersonnel" />
+          <EntitySet Name="T_SocialPensionApply" EntityType="Self.T_SocialPensionApply" />
+          <EntitySet Name="T_StreetHelpAgeApply" EntityType="Self.T_StreetHelpAgeApply" />
+          <EntitySet Name="T_StreetPensionApply" EntityType="Self.T_StreetPensionApply" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GuMeiDBModelStoreContainer" CdmEntityContainer="GuMeiDBEntities">
+          <EntitySetMapping Name="S_city">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_city">
+              <MappingFragment StoreEntitySet="S_city">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Cityid" ColumnName="Cityid" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Provinceid" ColumnName="Provinceid" />
+                <ScalarProperty Name="Citypy" ColumnName="Citypy" />
+                <ScalarProperty Name="Orderseq" ColumnName="Orderseq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_dict">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_dict">
+              <MappingFragment StoreEntitySet="S_dict">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Typecode" ColumnName="Typecode" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name_cn" ColumnName="Name_cn" />
+                <ScalarProperty Name="Name_hk" ColumnName="Name_hk" />
+                <ScalarProperty Name="Name_en" ColumnName="Name_en" />
+                <ScalarProperty Name="Value1" ColumnName="Value1" />
+                <ScalarProperty Name="Value2" ColumnName="Value2" />
+                <ScalarProperty Name="Value3" ColumnName="Value3" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_dicttype">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_dicttype">
+              <MappingFragment StoreEntitySet="S_dicttype">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Typecode" ColumnName="Typecode" />
+                <ScalarProperty Name="Typename_cn" ColumnName="Typename_cn" />
+                <ScalarProperty Name="Typename_en" ColumnName="Typename_en" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Isvalid" ColumnName="Isvalid" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_environment">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_environment">
+              <MappingFragment StoreEntitySet="S_environment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Parametername" ColumnName="Parametername" />
+                <ScalarProperty Name="Parametervalue" ColumnName="Parametervalue" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_menu">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_menu">
+              <MappingFragment StoreEntitySet="S_menu">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Menukind" ColumnName="Menukind" />
+                <ScalarProperty Name="Menuid" ColumnName="Menuid" />
+                <ScalarProperty Name="Menuname_zho" ColumnName="Menuname_zho" />
+                <ScalarProperty Name="Menuname_eng" ColumnName="Menuname_eng" />
+                <ScalarProperty Name="Pmenuid" ColumnName="Pmenuid" />
+                <ScalarProperty Name="Islastlevel" ColumnName="Islastlevel" />
+                <ScalarProperty Name="Orderseq" ColumnName="Orderseq" />
+                <ScalarProperty Name="Menuactions" ColumnName="Menuactions" />
+                <ScalarProperty Name="Showallways" ColumnName="Showallways" />
+                <ScalarProperty Name="Menuobject" ColumnName="Menuobject" />
+                <ScalarProperty Name="Menuurl" ColumnName="Menuurl" />
+                <ScalarProperty Name="Menuparams" ColumnName="Menuparams" />
+                <ScalarProperty Name="Menuiconsmall" ColumnName="Menuiconsmall" />
+                <ScalarProperty Name="Menuiconmiddle" ColumnName="Menuiconmiddle" />
+                <ScalarProperty Name="Menuiconlarge" ColumnName="Menuiconlarge" />
+                <ScalarProperty Name="Iscontextmenu" ColumnName="Iscontextmenu" />
+                <ScalarProperty Name="Istoolbarmenu" ColumnName="Istoolbarmenu" />
+                <ScalarProperty Name="Isshortcutmenu" ColumnName="Isshortcutmenu" />
+                <ScalarProperty Name="Showtopsep" ColumnName="Showtopsep" />
+                <ScalarProperty Name="Showbottomsep" ColumnName="Showbottomsep" />
+                <ScalarProperty Name="Tag_1" ColumnName="Tag_1" />
+                <ScalarProperty Name="Tag_2" ColumnName="Tag_2" />
+                <ScalarProperty Name="Tag_3" ColumnName="Tag_3" />
+                <ScalarProperty Name="Tag_4" ColumnName="Tag_4" />
+                <ScalarProperty Name="Tag_5" ColumnName="Tag_5" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuser" ColumnName="Createuser" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuser" ColumnName="Updateuser" />
+                <ScalarProperty Name="Updateip" ColumnName="Updateip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_role">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_role">
+              <MappingFragment StoreEntitySet="S_role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Roleid" ColumnName="Roleid" />
+                <ScalarProperty Name="Rolename" ColumnName="Rolename" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+                <ScalarProperty Name="Roletype" ColumnName="Roletype" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_role_menu">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_role_menu">
+              <MappingFragment StoreEntitySet="S_role_menu">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Roleid" ColumnName="Roleid" />
+                <ScalarProperty Name="Menuid" ColumnName="Menuid" />
+                <ScalarProperty Name="Userpower" ColumnName="Userpower" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_user">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_user">
+              <MappingFragment StoreEntitySet="S_user">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Realname" ColumnName="Realname" />
+                <ScalarProperty Name="Usertype" ColumnName="Usertype" />
+                <ScalarProperty Name="Dept_id" ColumnName="Dept_id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Islocked" ColumnName="Islocked" />
+                <ScalarProperty Name="Ischangepwd" ColumnName="Ischangepwd" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Isdeleted" ColumnName="Isdeleted" />
+                <ScalarProperty Name="Lastlogintime" ColumnName="Lastlogintime" />
+                <ScalarProperty Name="Lastloginip" ColumnName="Lastloginip" />
+                <ScalarProperty Name="Logintimes" ColumnName="Logintimes" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+                <ScalarProperty Name="Clientid" ColumnName="Clientid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_user_log">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_user_log">
+              <MappingFragment StoreEntitySet="S_user_log">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="Oprttype" ColumnName="Oprttype" />
+                <ScalarProperty Name="Oprttime" ColumnName="Oprttime" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+                <ScalarProperty Name="Macaddr" ColumnName="Macaddr" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Ip_2" ColumnName="Ip_2" />
+                <ScalarProperty Name="Clientversion" ColumnName="Clientversion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_user_loginerror">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_user_loginerror">
+              <MappingFragment StoreEntitySet="S_user_loginerror">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Oprttype" ColumnName="Oprttype" />
+                <ScalarProperty Name="Oprttime" ColumnName="Oprttime" />
+                <ScalarProperty Name="Clientid" ColumnName="Clientid" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Errortimes" ColumnName="Errortimes" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_user_role">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_user_role">
+              <MappingFragment StoreEntitySet="S_user_role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="Roleid" ColumnName="Roleid" />
+                <ScalarProperty Name="Createtime" ColumnName="Createtime" />
+                <ScalarProperty Name="Createuserid" ColumnName="Createuserid" />
+                <ScalarProperty Name="Updatetime" ColumnName="Updatetime" />
+                <ScalarProperty Name="Updateuserid" ColumnName="Updateuserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_user_validatenum">
+            <EntityTypeMapping TypeName="GuMeiDBModel.S_user_validatenum">
+              <MappingFragment StoreEntitySet="S_user_validatenum">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Mobilenum" ColumnName="Mobilenum" />
+                <ScalarProperty Name="Validatetype" ColumnName="Validatetype" />
+                <ScalarProperty Name="Validatenum" ColumnName="Validatenum" />
+                <ScalarProperty Name="Expiretime" ColumnName="Expiretime" />
+                <ScalarProperty Name="Sessionid" ColumnName="Sessionid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CareApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_CareApply">
+              <MappingFragment StoreEntitySet="T_CareApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Household" ColumnName="Household" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Committee" ColumnName="Committee" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="DiseaseHistory" ColumnName="DiseaseHistory" />
+                <ScalarProperty Name="DrugTaboo" ColumnName="DrugTaboo" />
+                <ScalarProperty Name="ServicePersonnelId" ColumnName="ServicePersonnelId" />
+                <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="HeadImgUrl" ColumnName="HeadImgUrl" />
+                <ScalarProperty Name="ElderlyType" ColumnName="ElderlyType" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_DemandApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_DemandApply">
+              <MappingFragment StoreEntitySet="T_DemandApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Household" ColumnName="Household" />
+                <ScalarProperty Name="Children" ColumnName="Children" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Health" ColumnName="Health" />
+                <ScalarProperty Name="RequiredServices" ColumnName="RequiredServices" />
+                <ScalarProperty Name="ServiceTime" ColumnName="ServiceTime" />
+                <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+                <ScalarProperty Name="ServicePersonnelId" ColumnName="ServicePersonnelId" />
+                <ScalarProperty Name="Committee" ColumnName="Committee" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+                <ScalarProperty Name="ServiceStartTime" ColumnName="ServiceStartTime" />
+                <ScalarProperty Name="ServiceEndTime" ColumnName="ServiceEndTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Elderly">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_Elderly">
+              <MappingFragment StoreEntitySet="T_Elderly">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ElderlyType" ColumnName="ElderlyType" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="HomeArea" ColumnName="HomeArea" />
+                <ScalarProperty Name="Spouse" ColumnName="Spouse" />
+                <ScalarProperty Name="Children" ColumnName="Children" />
+                <ScalarProperty Name="Identity" ColumnName="Identity" />
+                <ScalarProperty Name="HeadImgUrl" ColumnName="HeadImgUrl" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="EmergencyContact" ColumnName="EmergencyContact" />
+                <ScalarProperty Name="Volunteer" ColumnName="Volunteer" />
+                <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+                <ScalarProperty Name="IsRegistry" ColumnName="IsRegistry" />
+                <ScalarProperty Name="IsLonely" ColumnName="IsLonely" />
+                <ScalarProperty Name="IsSmoking" ColumnName="IsSmoking" />
+                <ScalarProperty Name="Alarm" ColumnName="Alarm" />
+                <ScalarProperty Name="IsUseBlanket" ColumnName="IsUseBlanket" />
+                <ScalarProperty Name="IsCutFuncation" ColumnName="IsCutFuncation" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_ExchangeRecord">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_ExchangeRecord">
+              <MappingFragment StoreEntitySet="T_ExchangeRecord">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="OutId" ColumnName="OutId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_HelpAgeAgency">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_HelpAgeAgency">
+              <MappingFragment StoreEntitySet="T_HelpAgeAgency">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AgencyType" ColumnName="AgencyType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="LegalPerson" ColumnName="LegalPerson" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Certificate" ColumnName="Certificate" />
+                <ScalarProperty Name="ChargeStandard" ColumnName="ChargeStandard" />
+                <ScalarProperty Name="ServiceEvaluation" ColumnName="ServiceEvaluation" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AgencyCode" ColumnName="AgencyCode" />
+                <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+                <ScalarProperty Name="ContactsMobile" ColumnName="ContactsMobile" />
+                <ScalarProperty Name="ContactsEmail" ColumnName="ContactsEmail" />
+                <ScalarProperty Name="ContactsIdCard" ColumnName="ContactsIdCard" />
+                <ScalarProperty Name="ContactsIdCardImg" ColumnName="ContactsIdCardImg" />
+                <ScalarProperty Name="AgencyCodeImg" ColumnName="AgencyCodeImg" />
+                <ScalarProperty Name="BusinessLicenseImg" ColumnName="BusinessLicenseImg" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+                <ScalarProperty Name="Acreage" ColumnName="Acreage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_LifeApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_LifeApply">
+              <MappingFragment StoreEntitySet="T_LifeApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_LifeServiceAgency">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_LifeServiceAgency">
+              <MappingFragment StoreEntitySet="T_LifeServiceAgency">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="LegalPerson" ColumnName="LegalPerson" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="OtherType" ColumnName="OtherType" />
+                <ScalarProperty Name="ChargeStandard" ColumnName="ChargeStandard" />
+                <ScalarProperty Name="ServiceEvaluation" ColumnName="ServiceEvaluation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="AgencyCode" ColumnName="AgencyCode" />
+                <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+                <ScalarProperty Name="ContactsMobile" ColumnName="ContactsMobile" />
+                <ScalarProperty Name="ContactsEmail" ColumnName="ContactsEmail" />
+                <ScalarProperty Name="ContactsIdCard" ColumnName="ContactsIdCard" />
+                <ScalarProperty Name="ContactsIdCardImg" ColumnName="ContactsIdCardImg" />
+                <ScalarProperty Name="AgencyCodeImg" ColumnName="AgencyCodeImg" />
+                <ScalarProperty Name="BusinessLicenseImg" ColumnName="BusinessLicenseImg" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_MedicalAgency">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_MedicalAgency">
+              <MappingFragment StoreEntitySet="T_MedicalAgency">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="LegalPerson" ColumnName="LegalPerson" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="EmergencyDoctor" ColumnName="EmergencyDoctor" />
+                <ScalarProperty Name="Expert" ColumnName="Expert" />
+                <ScalarProperty Name="ChargeStandard" ColumnName="ChargeStandard" />
+                <ScalarProperty Name="ServiceEvaluation" ColumnName="ServiceEvaluation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="HospitalLevel" ColumnName="HospitalLevel" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="AgencyCode" ColumnName="AgencyCode" />
+                <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+                <ScalarProperty Name="ContactsMobile" ColumnName="ContactsMobile" />
+                <ScalarProperty Name="ContactsEmail" ColumnName="ContactsEmail" />
+                <ScalarProperty Name="ContactsIdCard" ColumnName="ContactsIdCard" />
+                <ScalarProperty Name="ContactsIdCardImg" ColumnName="ContactsIdCardImg" />
+                <ScalarProperty Name="AgencyCodeImg" ColumnName="AgencyCodeImg" />
+                <ScalarProperty Name="BusinessLicenseImg" ColumnName="BusinessLicenseImg" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_MedicalApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_MedicalApply">
+              <MappingFragment StoreEntitySet="T_MedicalApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="HealthCertificate" ColumnName="HealthCertificate" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_News">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_News">
+              <MappingFragment StoreEntitySet="T_News">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NewsType" ColumnName="NewsType" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PicUrl" ColumnName="PicUrl" />
+                <ScalarProperty Name="ShortContent" ColumnName="ShortContent" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="PublishUser" ColumnName="PublishUser" />
+                <ScalarProperty Name="PublishTime" ColumnName="PublishTime" />
+                <ScalarProperty Name="Hits" ColumnName="Hits" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_PensionAgency">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_PensionAgency">
+              <MappingFragment StoreEntitySet="T_PensionAgency">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="LegalPerson" ColumnName="LegalPerson" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Certificate" ColumnName="Certificate" />
+                <ScalarProperty Name="KPI" ColumnName="KPI" />
+                <ScalarProperty Name="ChargeStandard" ColumnName="ChargeStandard" />
+                <ScalarProperty Name="ServiceEvaluation" ColumnName="ServiceEvaluation" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="AgencyCategory" ColumnName="AgencyCategory" />
+                <ScalarProperty Name="AgencyType" ColumnName="AgencyType" />
+                <ScalarProperty Name="Bed" ColumnName="Bed" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AgencyCode" ColumnName="AgencyCode" />
+                <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+                <ScalarProperty Name="ContactsMobile" ColumnName="ContactsMobile" />
+                <ScalarProperty Name="ContactsEmail" ColumnName="ContactsEmail" />
+                <ScalarProperty Name="ContactsIdCard" ColumnName="ContactsIdCard" />
+                <ScalarProperty Name="ContactsIdCardImg" ColumnName="ContactsIdCardImg" />
+                <ScalarProperty Name="AgencyCodeImg" ColumnName="AgencyCodeImg" />
+                <ScalarProperty Name="BusinessLicenseImg" ColumnName="BusinessLicenseImg" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_PensionApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_PensionApply">
+              <MappingFragment StoreEntitySet="T_PensionApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Household" ColumnName="Household" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DiseaseHistory" ColumnName="DiseaseHistory" />
+                <ScalarProperty Name="DrugTaboo" ColumnName="DrugTaboo" />
+                <ScalarProperty Name="Guardian" ColumnName="Guardian" />
+                <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+                <ScalarProperty Name="GuardianMobile" ColumnName="GuardianMobile" />
+                <ScalarProperty Name="GuardianAddress" ColumnName="GuardianAddress" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="Request" ColumnName="Request" />
+                <ScalarProperty Name="ApplicantMobile" ColumnName="ApplicantMobile" />
+                <ScalarProperty Name="HeadImgUrl" ColumnName="HeadImgUrl" />
+                <ScalarProperty Name="ElderlyId" ColumnName="ElderlyId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Committee" ColumnName="Committee" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_PensionProduct">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_PensionProduct">
+              <MappingFragment StoreEntitySet="T_PensionProduct">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="ProductImg" ColumnName="ProductImg" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+                <ScalarProperty Name="ExchangeIntegral" ColumnName="ExchangeIntegral" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_PublicApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_PublicApply">
+              <MappingFragment StoreEntitySet="T_PublicApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_PublicServiceAgency">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_PublicServiceAgency">
+              <MappingFragment StoreEntitySet="T_PublicServiceAgency">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="LegalPerson" ColumnName="LegalPerson" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="OtherType" ColumnName="OtherType" />
+                <ScalarProperty Name="ChargeStandard" ColumnName="ChargeStandard" />
+                <ScalarProperty Name="ServiceEvaluation" ColumnName="ServiceEvaluation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="AgencyCode" ColumnName="AgencyCode" />
+                <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+                <ScalarProperty Name="ContactsMobile" ColumnName="ContactsMobile" />
+                <ScalarProperty Name="ContactsEmail" ColumnName="ContactsEmail" />
+                <ScalarProperty Name="ContactsIdCard" ColumnName="ContactsIdCard" />
+                <ScalarProperty Name="ContactsIdCardImg" ColumnName="ContactsIdCardImg" />
+                <ScalarProperty Name="AgencyCodeImg" ColumnName="AgencyCodeImg" />
+                <ScalarProperty Name="BusinessLicenseImg" ColumnName="BusinessLicenseImg" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_recordServers">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_recordServers">
+              <MappingFragment StoreEntitySet="T_recordServers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="usertype" ColumnName="usertype" />
+                <ScalarProperty Name="starttime" ColumnName="starttime" />
+                <ScalarProperty Name="endtime" ColumnName="endtime" />
+                <ScalarProperty Name="totaltime" ColumnName="totaltime" />
+                <ScalarProperty Name="record" ColumnName="record" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_RescuePersonnel">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_RescuePersonnel">
+              <MappingFragment StoreEntitySet="T_RescuePersonnel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PersonnelType" ColumnName="PersonnelType" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="ServiceSkills" ColumnName="ServiceSkills" />
+                <ScalarProperty Name="ServiceTime" ColumnName="ServiceTime" />
+                <ScalarProperty Name="ServiceEvaluation" ColumnName="ServiceEvaluation" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="HeadImgUrl" ColumnName="HeadImgUrl" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_RescuePersonnelApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_RescuePersonnelApply">
+              <MappingFragment StoreEntitySet="T_RescuePersonnelApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="HealthCertificate" ColumnName="HealthCertificate" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="PersonnelId" ColumnName="PersonnelId" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_ServicePersonnel">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_ServicePersonnel">
+              <MappingFragment StoreEntitySet="T_ServicePersonnel">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PersonnelType" ColumnName="PersonnelType" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="HeadImgUrl" ColumnName="HeadImgUrl" />
+                <ScalarProperty Name="ServiceSkills" ColumnName="ServiceSkills" />
+                <ScalarProperty Name="ServiceTime" ColumnName="ServiceTime" />
+                <ScalarProperty Name="ServiceEvaluation" ColumnName="ServiceEvaluation" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="TotalIntegral" ColumnName="TotalIntegral" />
+                <ScalarProperty Name="UsedIntegral" ColumnName="UsedIntegral" />
+                <ScalarProperty Name="ResidualIntegral" ColumnName="ResidualIntegral" />
+                <ScalarProperty Name="IsVolunteerExperience" ColumnName="IsVolunteerExperience" />
+                <ScalarProperty Name="IsWorkExperience" ColumnName="IsWorkExperience" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+                <ScalarProperty Name="SkillCertificate" ColumnName="SkillCertificate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SocialPensionApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_SocialPensionApply">
+              <MappingFragment StoreEntitySet="T_SocialPensionApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="HealthCertificate" ColumnName="HealthCertificate" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="TypeOption" ColumnName="TypeOption" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_StreetHelpAgeApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_StreetHelpAgeApply">
+              <MappingFragment StoreEntitySet="T_StreetHelpAgeApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="HealthCertificate" ColumnName="HealthCertificate" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_StreetPensionApply">
+            <EntityTypeMapping TypeName="GuMeiDBModel.T_StreetPensionApply">
+              <MappingFragment StoreEntitySet="T_StreetPensionApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="HealthCertificate" ColumnName="HealthCertificate" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUserid" ColumnName="CreateUserid" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserid" ColumnName="UpdateUserid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
