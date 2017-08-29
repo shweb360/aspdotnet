@@ -1,44 +1,26 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace ConsoleApplication2
 {
     public class Program
     {
-        public static int mm(ref int i){
-
-            return i+1;
-        }
-       
-
-
         static void Main(string[] args)
         {
-            
-            //string st = "0,10,11,12,13,14,16";
-            //string max = st.Remove(0, st.LastIndexOf(",")+1);
-            //int i = int.Parse(max);
-
-            //var bjfxThree = new List<string>()
-            //{
-            //    "P0101",
-            //    "P0101",
-            //};
-            //var strStart = "P0101001".Substring(0, 5);// P0101001
-            //if (bjfxThree.Contains(strStart))
-            //{
-            //  string  strFxkf = "-1";
-            //}
-
-            //string st = "-1";
-            //int m = int.Parse(st);
-            //int j=0;
-            //int s = mm(ref j );
+            //调用示例：
+            Hashtable ht = new Hashtable();  //Hashtable 为webservice所需要的参数集
+            ht.Add("zjh", "122");
+            ht.Add("zjlx", "22");
+           // XmlDocument xx = WebServiceCaller.QuerySoapWebService("http://localhost:8821/WebService/DataBridge.asmx", "GetQySlry", ht);
+            XmlDocument xx = WebServiceCaller.QuerySoapWebService("http://localhost:8821/WebService/DataBridge.asmx", "GetQySlry", ht);
+            Console.WriteLine(xx.OuterXml);
 
             #region 屏蔽测试代码
 
